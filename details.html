@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoInvestor</title>
+
+    <link rel="stylesheet" href="stylesheets.css"/>
+    <script src="sticky-header.js"></script>
+    <script src="cryptoChart.js"></script>
+    <script src="scoreboard.js"></script>
+    <script src="loginOrRegister.js" defer></script>
+    <script src= "configUrl.js" type="text/javascript"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+
+<body>
+    <div class="main-header my-header">
+        <div class="main-row">
+            <div class="main-logo"><a href="index.html">CryptoInvestor</a> </div>
+            <div class="main-space"><input class="searchmain" placeholder="Wyszukaj kryptowaluty..." type="search"></div>
+            <div class="main-przycisk"><a href="scoreboard.html"><button class="button-ap button-ap1">Wyniki</button></a></div>
+            <div class="main-przycisk"><a href="profile.html"><button class="button-ap button-ap1">Profil</button></a></div>
+            <div class="main-przycisk"><a href="login.html"><button id="logButton" class="button-ap button-ap1">Zaloguj</button></a></div>
+        </div>
+      </div>
+
+   <!--------------------Strona główna----------------------->
+   <div class="background-sticky-menu"></div>
+
+   <div class="container">
+        <div class="chartDiv"> <div id="name" class="Big-text"></div> <div id="priceUsd+ChangePercent24Hr" class="grey-text"></div> <canvas id='myChart'></canvas> </div>
+        <div class="Description-div">
+            <table width="100%">
+                <tr>
+                    <th class="grey-text">Market Cap (USD)</th> <th class="grey-text">24H VOLUME (USD)</th> <th class="grey-text">Circulating Supply</th> <th class="grey-text">Max Supply</th>
+                </tr>
+                <tr>
+                    <th class="Small-text"><div id="marketCapUsd"></div></th> <th class="Small-text"><div id="volumeUsd24Hr"></div></th> <th class="Small-text"><div id="supply"></div></th> <th class="Small-text"><div id="maxSupply"></div></th>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr>
+                    <th class="grey-text">Kup/Sprzedaj Kryptowalutę: </th>        
+                    <th><select id="sellBuy" class="transaction-list">  
+                        <option value="buy"> Kup </option>  
+                        <option value="sell"> Sprzedaj </option> 
+                    </select></th>     
+                    <th><input id="amount" placeholder="Ilość" class="transaction-input" type="number" size="1"/></th> 
+                    <th><div class="main-przycisk"><button id="buyButton" class="transaction-button" onclick="transactionAccept()">Akceptuj</button></div></th>           
+                    </tr>
+            </table>
+        </div>
+  </div>
+
+
+
+</body>
+</html>
